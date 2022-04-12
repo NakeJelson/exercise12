@@ -30,8 +30,8 @@ class Queue<E> {
             throw new StackEmptyException();
         }
 
-        E returnElement = elements[index - size];
-        index++;
+        E returnElement = elements[size - index];
+        index--;
         return returnElement;
     }
 }
